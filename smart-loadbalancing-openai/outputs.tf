@@ -5,3 +5,8 @@ output "api_endpoint" {
 output "api_suffix" {
   value = var.openai_api_path
 }
+
+output "subscription_key" {
+  value = azurerm_api_management_subscription.apim_subscription.primary_key
+  sensitive = true
+}
